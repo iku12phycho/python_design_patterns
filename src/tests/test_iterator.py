@@ -1,4 +1,4 @@
-import iterator
+from Iterator import iterator
 
 def test_builtin_iterator(capfd):
   iterator.builtin_iterator()
