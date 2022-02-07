@@ -15,3 +15,4 @@ jobs:
         run: pip install pytest
       - name: Run Tests
         run: python -m pytest
+        working-directory: ./src
