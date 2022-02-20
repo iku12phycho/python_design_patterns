@@ -14,5 +14,5 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Run Tests
-        run: python -m pytest
+        run: python -B -m pytest
         working-directory: ./src
