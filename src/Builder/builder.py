@@ -47,7 +47,7 @@ class HTMLBuilder(AbstractBuilder):
       return "".join(html_contents)
 
   def build_footer(self, footer):
-      return "<footer><p>{}</p></footer>\n".format(footer)
+      return "<footer><p>{}</p></footer>".format(footer)
 
 class TextBuilder(AbstractBuilder):
 
@@ -64,7 +64,7 @@ class TextBuilder(AbstractBuilder):
       return "".join(text_contents)
 
   def build_footer(self, footer):
-      return "{}\n".format(footer)
+      return "{}".format(footer)
 
 if __name__ == "__main__":
   main()

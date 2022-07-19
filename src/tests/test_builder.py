@@ -1,7 +1,7 @@
 from Builder import builder
 
 def test_director_htmlbuilder(capfd):
-  html = builder.Director(builder.HTMLBuilder())
+  html = builder.Director().construct(builder.HTMLBuilder())
   print(html)
   out, err = capfd.readouterr()
   assert out == '<h1>Monthly Report</h1>\n'\
@@ -11,7 +11,7 @@ def test_director_htmlbuilder(capfd):
                 '<footer><p>-*-*-*-</p></footer>\n'
 
 def test_director_textbuilder(capfd):
-  text = builder.Director(builder.TextBuilder())
+  text = builder.Director().construct(builder.TextBuilder())
   print(text)
   out, err = capfd.readouterr()
   assert out == '**Monthly Report**\n'\
